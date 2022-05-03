@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>생성자 함수</title>
+</head>
+<body>
+
+<div></div>
+
+<script>
+// let a = {
+//   num: 12,
+//   sum: function() {
+//     a.num + 1
+//   }
+// }
+
+// let 객체만들기 = (num) => {
+//   const a = {};
+//   a.숫자 = num;
+//   a.더하기 = function() { a.숫자 += 1}
+//   return a;
+// }
+// let 결과 = 객체만들기(3);
+// 결과.더하기();
+// console.log(결과);
+
+// function 객체만들기(num) {
+//   this.숫자 = num;
+//   this.더하기 = function() { this.숫자 += 1 }
+// }
+// let 결과 = new 객체만들기(3);
+// 결과.더하기();
+// console.log(결과);
+
+function 운송기 (엔진수, 바퀴수, 엑셀수, 창문수) {
+  this.엔진 = 엔진수;
+  this.바퀴 = 바퀴수;
+  this.엑셀 = 엑셀수;
+  this.창문 = 창문수;
+  // this.전진하기 = function() {console.log('전진')}
+  // this.후진하기 = function() {console.log('후진')}
+  // this.기름넣기 = function() {console.log('만땅')}
+}
+운송기.prototype.전진하기 = function() {console.log('전진')}
+운송기.prototype.후진하기 = function() {console.log('후진')}
+운송기.prototype.기름넣기 = function() {console.log('만땅')}
+
+let 자동차 = new 운송기(1, 4, 1, 4);
+let 배 = new 운송기(1, 0, 1, 30);
+console.log(자동차, 배);
+
+자동차.전진하기();
+
+</script>
+</body>
+</html>
